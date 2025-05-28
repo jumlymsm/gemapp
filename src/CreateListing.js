@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaGem } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 
 // Updated ShapePicker component with enhanced SVGs for realistic gemstone visuals
