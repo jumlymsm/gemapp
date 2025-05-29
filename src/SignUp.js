@@ -20,7 +20,7 @@ export default function SignUp({ onRequireConfirm }) {
     setError("");
     setLoading(true);
     try {
-      await Auth.signUp({
+      const { user } = await Auth.signUp({
         username: email,
         password,
         attributes: {
@@ -29,9 +29,11 @@ export default function SignUp({ onRequireConfirm }) {
           "custom:country": country
         }
       });
+      // If confirmation is required, trigger parent callback
       if (onRequireConfirm) onRequireConfirm(email);
     } catch (err) {
-      setError(err.message || "Sign up failed.");
+      // Show clear error message
+      setError(err.message || (err && err.errors && err.errors[0] && err.errors[0].message) || "Sign up failed.");
     }
     setLoading(false);
   };
