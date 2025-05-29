@@ -1,0 +1,43 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gemapp-dev-057f9-authRole",
+      "UnauthRoleArn": "arn:aws:iam::626635402159:role/amplify-gemapp-dev-057f9-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::626635402159:role/amplify-gemapp-dev-057f9-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-gemapp-dev-057f9-deployment",
+      "UnauthRoleName": "amplify-gemapp-dev-057f9-unauthRole",
+      "StackName": "amplify-gemapp-dev-057f9",
+      "StackId": "arn:aws:cloudformation:us-east-1:626635402159:stack/amplify-gemapp-dev-057f9/9497c560-3c75-11f0-a625-0e9f5cd7abfb",
+      "AmplifyAppId": "d27uvtfjtw8lzw",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-gemapp-dev-057f9-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "gemappc611623f": {}
+      },
+      "function": {
+        "gemappc611623fDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-gemapp-dev-057f9-deployment",
+          "s3Key": "amplify-builds/gemappc611623fDefineAuthChallenge-4452456c733734685258-build.zip"
+        },
+        "gemappc611623fCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-gemapp-dev-057f9-deployment",
+          "s3Key": "amplify-builds/gemappc611623fCreateAuthChallenge-5a786c454d547570696f-build.zip"
+        },
+        "gemappc611623fVerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "",
+          "deploymentBucketName": "amplify-gemapp-dev-057f9-deployment",
+          "s3Key": "amplify-builds/gemappc611623fVerifyAuthChallengeResponse-364a6f33723078357767-build.zip"
+        },
+        "gemappc611623fCustomMessage": {
+          "REDIRECTURL": "N",
+          "EMAILSUBJECT": "Registration Confirmation",
+          "EMAILMESSAGE": "Your Registration is Successfull",
+          "deploymentBucketName": "amplify-gemapp-dev-057f9-deployment",
+          "s3Key": "amplify-builds/gemappc611623fCustomMessage-5a4c7a4d664975774a47-build.zip"
+        }
+      }
+    }
+  }
+}

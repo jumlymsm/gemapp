@@ -1,0 +1,191 @@
+{
+  "auth": {
+    "gemappc611623f": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "gemappc611623fDefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "gemappc611623fCreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "gemappc611623fVerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "gemappc611623fCustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "ADDRESS",
+          "BIRTHDATE",
+          "EMAIL",
+          "FAMILY_NAME",
+          "NAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "gemappc611623fCreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "gemappc611623fCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "gemappc611623fDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "gemappc611623fVerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_gemappc611623fCreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fCreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fVerifyAuthChallengeResponse_RECAPTCHASECRET": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fVerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fVerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_gemappc611623fVerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gemappc611623fVerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}
