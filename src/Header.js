@@ -76,6 +76,8 @@ const Header = () => {
           ) : (
             <>
               <a href="/login" className="px-3 py-1 rounded hover:bg-blue-800 transition">Login</a>
+              <a href="/login2" className="px-3 py-1 rounded hover:bg-blue-800 transition">Login2</a>
+              <a href="/signup2" className="px-3 py-1 rounded hover:bg-blue-800 transition">Sign Up</a>
             </>
           )}
           {/* Create Listing Button */}
@@ -144,6 +146,8 @@ const Header = () => {
             ) : (
               <>
                 <a href="/login" className="px-3 py-2 rounded hover:bg-blue-800 transition">Login</a>
+                <a href="/login2" className="px-3 py-2 rounded hover:bg-blue-800 transition">Login2</a>
+                <a href="/signup2" className="px-3 py-2 rounded hover:bg-blue-800 transition">Sign Up</a>
               </>
             )}
           </div>
