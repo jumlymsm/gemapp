@@ -10,6 +10,7 @@ import Payment from "./payment";
 import AdminDashboard from "./admin";
 import Login2 from "./Login2";
 import Signup2 from "./Signup2";
+import LoginSuccess from "./LoginSuccess";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/listing" element={<Listing />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/login-success" element={<LoginSuccess />} />
         </Routes>
         <Footer />
       </div>

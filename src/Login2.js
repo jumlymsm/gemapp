@@ -16,8 +16,8 @@ export default function Login2() {
     setError("");
     try {
       await Auth.signIn(email, password);
-      // Redirect to homepage after successful login
-      navigate("/");
+      // Redirect to create-listing page after successful login
+      navigate("/create-listing");
     } catch (err) {
       setError(err.message || "Login failed.");
     }
