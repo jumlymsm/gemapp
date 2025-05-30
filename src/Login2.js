@@ -15,10 +15,21 @@ export default function Login2() {
     setLoading(true);
     setError("");
     try {
-      await Auth.signIn(email, password);
-      // Redirect to create-listing page after successful login
+      // 1) Sign in the user
+      const user = await Auth.signIn(email, password);
+
+      // 2) Handle the NEW_PASSWORD_REQUIRED challenge
+      if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
+        // Ask user to enter a new password
+        const newPassword = window.prompt("Your account requires a password reset. Please enter a new password:");
+        // Complete the challenge
+        await Auth.completeNewPassword(user, newPassword);
+      }
+
+      // 3) On success, redirect to create-listing
       navigate("/create-listing");
     } catch (err) {
+      console.error("Cognito error:", err);
       setError(err.message || "Login failed.");
     }
     setLoading(false);
