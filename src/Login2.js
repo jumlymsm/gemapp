@@ -29,7 +29,13 @@ export default function Login2() {
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
         <h2 className="text-3xl font-bold mb-2 text-gray-800 text-center">Sign in to GemFind</h2>
         <form className="w-full flex flex-col gap-4" onSubmit={handleLogin}>
-          {error && <div className="text-red-500 text-sm text-center">{error}</div>}
+          {error && <div className="text-red-500 text-sm text-center">{error === 'User is not confirmed.' ? (
+            <>
+              Authentication Error: Account not confirmed.<br />
+              <a href="/signup2" className="text-blue-500 underline">Resend confirmation</a>
+            </>
+          ) : error}
+          </div>}
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
             <input
