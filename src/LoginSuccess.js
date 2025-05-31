@@ -8,6 +8,8 @@ export default function LoginSuccess() {
         <p className="text-lg text-gray-700 mb-6">Welcome to GemFind. You have successfully logged in.</p>
         <a
           href="https://main.d27uvtfjtw8lzw.amplifyapp.com/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-semibold text-lg hover:bg-green-700 transition"
         >
           Go to Main Site
