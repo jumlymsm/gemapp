@@ -6,10 +6,10 @@ const awsmobile = {
     "aws_cognito_identity_pool_id": "us-east-1:9b16ab56-babb-4e9b-8334-d5e5388b33e4",
     "aws_cognito_region": "us-east-1",
     "aws_user_pools_id": "us-east-1_M1BBamYWR",
-    "aws_user_pools_web_client_id": "gn64v4s1ghqn3bi7a15vod4b0",
+    "aws_user_pools_web_client_id": "4v6bd72ema9ijsh3msaa2ea540",
     "oauth": {
         "domain": "us-east-1m1bbamywr.auth.us-east-1.amazoncognito.com",
-        "scope": ["openid", "email"],
+        "scope": ["email", "openid", "phone"],
         "redirectSignIn": "https://main.d27uvtfjtw8lzw.amplifyapp.com/create-listing",
         "redirectSignOut": "https://main.d27uvtfjtw8lzw.amplifyapp.com/",
         "responseType": "code"
