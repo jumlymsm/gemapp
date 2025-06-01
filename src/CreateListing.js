@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { FaGem } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { Auth, API, graphqlOperation, Storage } from "aws-amplify";
+import { Auth, API, graphqlOperation } from "aws-amplify";
+import { Storage } from "@aws-amplify/storage";
 import { createListing as createListingMutation } from "./graphql/mutations";
 import ListingTable from "./ListingTable";
 
