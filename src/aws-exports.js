@@ -5,13 +5,19 @@ const awsmobile = {
     "aws_project_region": "us-east-1",
     "aws_cognito_identity_pool_id": "us-east-1:9b16ab56-babb-4e9b-8334-d5e5388b33e4",
     "aws_cognito_region": "us-east-1",
-    "aws_user_pools_id": "us-east-1_M1BBamYWR",
-    "aws_user_pools_web_client_id": "4v6bd72ema9ijsh3msaa2ea540",
+    "aws_user_pools_id": "us-east-1_exweNompU",
+    "aws_user_pools_web_client_id": "1pccr86g4bquou7ataoo0nvtlp",
     "oauth": {
-        "domain": "us-east-1m1bbamywr.auth.us-east-1.amazoncognito.com",
-        "scope": ["email", "openid", "phone"],
-        "redirectSignIn": "https://main.d27uvtfjtw8lzw.amplifyapp.com/create-listing",
-        "redirectSignOut": "https://main.d27uvtfjtw8lzw.amplifyapp.com/",
+        "domain": "no-dev.auth.us-east-1.amazoncognito.com",
+        "scope": [
+            "phone",
+            "email",
+            "openid",
+            "profile",
+            "aws.cognito.signin.user.admin"
+        ],
+        "redirectSignIn": "https://localhost:3000/",
+        "redirectSignOut": "https://localhost:3000/",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",
@@ -36,7 +42,13 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
-    ]
+    ],
+    "aws_appsync_graphqlEndpoint": "https://lkrqowuf4vfwtpspq7zuyjtrru.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-1",
+    "aws_appsync_authenticationType": "API_KEY",
+    "aws_appsync_apiKey": "da2-op2ys7ye6jevfjo2rmrkcxn56i",
+    "aws_user_files_s3_bucket": "gemappstorageimages057f9-dev",
+    "aws_user_files_s3_bucket_region": "us-east-1"
 };
 
 

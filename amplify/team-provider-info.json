@@ -37,6 +37,12 @@
           "deploymentBucketName": "amplify-gemapp-dev-057f9-deployment",
           "s3Key": "amplify-builds/gemappc611623fCustomMessage-5a4c7a4d664975774a47-build.zip"
         }
+      },
+      "api": {
+        "gemapp": {}
+      },
+      "storage": {
+        "gemphotos": {}
       }
     }
   }

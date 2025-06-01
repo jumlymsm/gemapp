@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "gemappc611623f_identitypool_c611623f",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "gemappc611623f",
     "userPoolName": "gemappc611623f_userpool_c611623f",
     "autoVerifiedAttributes": [
@@ -116,7 +116,12 @@
       }
     ],
     "permissions": [],
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"DefineAuthChallenge\",\n    \"lambdaFunctionName\": \"gemappc611623fDefineAuthChallenge\"\n  },\n  {\n    \"triggerType\": \"CreateAuthChallenge\",\n    \"lambdaFunctionName\": \"gemappc611623fCreateAuthChallenge\"\n  },\n  {\n    \"triggerType\": \"VerifyAuthChallengeResponse\",\n    \"lambdaFunctionName\": \"gemappc611623fVerifyAuthChallengeResponse\"\n  },\n  {\n    \"triggerType\": \"CustomMessage\",\n    \"lambdaFunctionName\": \"gemappc611623fCustomMessage\"\n  }\n]",
+    "authTriggerConnections": [
+      "{\"triggerType\":\"DefineAuthChallenge\",\"lambdaFunctionName\":\"gemappc611623fDefineAuthChallenge\"}",
+      "{\"triggerType\":\"CreateAuthChallenge\",\"lambdaFunctionName\":\"gemappc611623fCreateAuthChallenge\"}",
+      "{\"triggerType\":\"VerifyAuthChallengeResponse\",\"lambdaFunctionName\":\"gemappc611623fVerifyAuthChallengeResponse\"}",
+      "{\"triggerType\":\"CustomMessage\",\"lambdaFunctionName\":\"gemappc611623fCustomMessage\"}"
+    ],
     "parentStack": {
       "Ref": "AWS::StackId"
     },

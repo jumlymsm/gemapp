@@ -1,0 +1,14 @@
+type Gem @model
+  @auth(rules: [
+    # Only the authenticated owner can create/update/delete/read their own Gem
+    { allow: owner, ownerField: "owner", operations: [create, update, delete, read] },
+    # This rule allows anyone (authenticated or not) to read/list all Gem items.
+    { allow: public, operations: [read] }
+  ]) {
+  id: ID!
+  name: String!
+  description: String
+  price: Float
+  images: [String]
+  owner: String
+}
